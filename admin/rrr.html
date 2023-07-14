@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Security</title>
+    <style>
+
+    </style>
+</head>
+<body>
+    <center>
+    <form style="background-color:rgb(31, 141, 204);color:red;padding:10px;" action="" method="">
+        <div style="padding:10px">
+            <p>
+                <span>Enter the Weight: &nbsp;</span>
+                <input type="number" name="weight" style="border-radius:10px"><br>
+            </p>
+            <p>
+                <span>Enter the Height: &nbsp;</span>
+                <input type="number" name="height" style="border-radius:10px"><br>
+            </p>
+            
+            <button type="button" onclick="fun();">Calculate</button>
+        </div>
+    </form>
+    <br><br>
+    <div id="demo"></div>
+</center>
+    <script>
+        function fun(){
+            var BMI;
+            var w;
+            var h;
+            w=document.getElementsByName("weight")[0].value;
+            h=document.getElementsByName("height")[0].value;
+            BMI=parseInt(w)/parseInt(h);
+            
+            var con="BMI of the person = "+BMI;
+
+            document.getElementById("demo").innerHTML = con;
+
+
+        }
+    </script>
+    
+</body>
+</html>
